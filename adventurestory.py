@@ -1,3 +1,9 @@
+#In this program, Christina and I created an adventure program that has theme of milk and dispair. The computer user will go trough a system of questions with different outcomes and situations.
+#important information(you need to import time and import sys)
+#To begin, run the program and read and follow all the instructions carefully. Enjoy your adventure! 
+#This adventure story is sponsored by Almond Milk Inc.
+#Created by Christina Andronescu and Adrian Ramos
+
 import time
 import sys
 
@@ -7,9 +13,9 @@ def delay_print(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.005)
+        time.sleep(0.005) #rate at which words are printed
 
-def greeting():
+def greeting(): #introduction to the adventure story
         delay_print("Salutations " + name + ".\nYour story begins on a perfectly average Sunday and you, " + name + ", are a perfectly average person...")
         time.sleep(0.75)
         delay_print("however at precisely 7:36PM, something changes.\nThoughts of Frosted Flakes consume your mind, everything has suddenly narrowed down to the prospect of one (1) bowl of cereal.\nYou make your way to the kitchen.\nThe cereal, the bowl, and the spoon are all easy to find but when the time comes to seek the milk...")
@@ -21,7 +27,7 @@ def greeting():
         delay_print("\nYou're out of milk.")
         actDepression()
 
-def actDepression():
+def actDepression():   #the debate on whether or not to go to the store
     time.sleep(1.5)
     decision1 = input("\nWell, " + name + ", do you continue to act upon your cereal craving or reppress it like all other emotions in your life? Type '1' for act or '2' for reppress: ")
     if (decision1 == '1'):
@@ -36,7 +42,7 @@ def actDepression():
     delay_print("\n\nYou've made it to Generic Grocery Store.\nAs you amble your way towards the dairy section, you realize something is very wrong.\nRow after row of empty dairy shelves greet you. If you want that bowl of cereal, you must make a decision. ")
     atStore()
     
-def atStore():
+def atStore():      #decisions at the store
     decision2 = input("\nDo you ask an associate about the missing milk or do your emotions get the best of you and throw a tantrum? Type '1' for ask or '2' for tantrum: ")
     if (decision2 == '1'):
         delay_print("You ask an associate. He nods and seems to understand your question.\nHe wordlessly motions you to follow him to the back of the store. ")
@@ -51,7 +57,7 @@ def atStore():
     delay_print("The associate leads you to the unmarked door of a storage room.\nHe unlocks the door, revealing a massive refrigerated warehouse filled with crates of...milk?\nAt last, the end is near and the milk is here.\nThe associate attempts to get your attention again. He asks you a question:\n'So you want soy or 2%?'")
     soyOr2percent()
     
-def soyOr2percent():
+def soyOr2percent():      #to choose soy milk or 2% milk
     decision3 = input("\nType '1' for soy or '2' for 2%: ")
     if (decision3 == '1'):
         delay_print("Compras la botella de leche y luego vuelves a tu casa.\nPones la botella de leche arriba del mostrador, y buscas por el cereal.\nEncuentras la caja de Frosted Flakes. Sacudes la caja...")
@@ -69,7 +75,7 @@ def soyOr2percent():
         return True
     else:
         delay_print("Try again.\nIntentalo de nuevo.")
-        soyOr2percent()
+        soyOr2percent()     #ending of the adventure story
     
 greeting()
 
